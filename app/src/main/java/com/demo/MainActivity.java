@@ -77,6 +77,9 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void setListAdapter(ArrayList<Contact> data) {
+
+        getSupportLoaderManager().destroyLoader(1);
+
         this.data = data;
 
         ContactAdapter contactAdapter = new ContactAdapter(getApplicationContext(),data);
